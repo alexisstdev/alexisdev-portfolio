@@ -13,11 +13,17 @@
 }
 
 .aboutme-content > img {
-  width: 12rem;
+  width: 16rem;
+  border-radius: 50%;
 }
 .aboutme-info {
   width: 100%;
 }
+
+.aboutme-info span {
+  color: var(--accent-color);
+}
+
 .aboutme-info > p {
   font-size: var(--text-sm);
   color: var(--text-secondary);

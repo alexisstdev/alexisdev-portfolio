@@ -5,7 +5,7 @@ function AboutMe({ props }, ref) {
   return (
     <div className='aboutme-container container' ref={ref}>
       <div className='aboutme-content'>
-        <img src='vite.svg' alt='alexis-image' />
+        <img src='me.jpg' alt='alexis-image' />
         <div className='aboutme-info'>
           <h1>
             Hi, i'm <span>Alexis</span>
