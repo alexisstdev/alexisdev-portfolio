@@ -1,0 +1,77 @@
+.work-details {
+  margin-top: 6rem;
+}
+
+.work-details-category {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.work-details-name {
+  margin-top: 1rem;
+  font-size: var(--text-3xl);
+}
+
+.work-details-nav {
+  margin-top: 4rem;
+  font-size: var(--text-sm);
+}
+
+.work-details-nav a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.work-details-nav a:hover {
+  color: var(--accent-color);
+}
+
+.work-details-description-container {
+  justify-content: space-between;
+  margin-top: 4rem;
+  display: flex;
+  font-size: var(--text-sm);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.work-details-description-container > p {
+  color: var(--text-secondary);
+  flex: 0.9;
+}
+
+.work-details-description-tags h3 {
+  border-top: 1px solid var(--text-secondary);
+  padding-top: 1.4rem;
+  font-size: var(--text-sm);
+  margin-bottom: 0.7rem;
+}
+.work-details-description-tags span {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.work-details > img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .work-details-description-container {
+    flex-direction: column;
+  }
+}
+
+.work-details-controls {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+.work-details-controls button {
+  color: black;
+}
