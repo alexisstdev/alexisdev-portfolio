@@ -26,22 +26,27 @@ export default function Navbar({ goToRef, worksRef, contactRef, homeRef }) {
     };
   }, [lastScrollTop]);
 
+  function handleClick(ref) {
+    toggleMenu();
+    goToRef(ref);
+  }
+
   return (
     <div className='navbar-container'>
       <nav
         className={`navbar ${scrollDirection === 'down' ? 'scroll-down' : 'scroll-up'}`}
       >
-        <a className='navbar-logo' onClick={() => goToRef(homeRef)}>
+        <a className='navbar-logo' onClick={() => handleClick(homeRef)}>
           &lt;alexis.<span className='accent-color'>dev </span>/&gt;
         </a>
         <ul className={`navbar-menu ${isOpen ? 'is-open' : ''}`}>
-          <a className='navbar-link' onClick={() => goToRef(homeRef)}>
+          <a className='navbar-link' onClick={() => handleClick(homeRef)}>
             Home
           </a>
-          <a className='navbar-link' onClick={() => goToRef(worksRef)}>
+          <a className='navbar-link' onClick={() => handleClick(worksRef)}>
             Works
           </a>
-          <a className='navbar-link' onClick={() => goToRef(contactRef)}>
+          <a className='navbar-link' onClick={() => handleClick(contactRef)}>
             Contact
           </a>
         </ul>

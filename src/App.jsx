@@ -18,13 +18,14 @@ export default function App() {
   const navigate = useNavigate();
 
   function goToRef(ref) {
+    const scroll = () => ref.current?.scrollIntoView({ behavior: 'smooth' });
     if (location.pathname === '/') {
-      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      scroll();
       return;
     }
     navigate('/');
     setTimeout(() => {
-      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      scroll();
     }, 500);
   }
 
