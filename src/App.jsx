@@ -31,19 +31,20 @@ export default function App() {
 
   return (
     <AnimatePresence mode='wait'>
+      <Navbar
+        goToRef={goToRef}
+        homeRef={homeRef}
+        worksRef={worksRef}
+        contactRef={contactRef}
+      />
       <Routes location={location} key={location.pathname}>
         <Route
+          exact
           path='/'
           element={
             <>
-              <Navbar
-                goToRef={goToRef}
-                homeRef={homeRef}
-                worksRef={worksRef}
-                contactRef={contactRef}
-              />
               <AnimatedContainer>
-                <AboutMe ref={homeRef} />
+                <AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
                 <Works ref={worksRef} />
                 <Contact ref={contactRef} />
               </AnimatedContainer>
@@ -54,12 +55,6 @@ export default function App() {
           path='/work/:id'
           element={
             <>
-              <Navbar
-                goToRef={goToRef}
-                homeRef={homeRef}
-                worksRef={worksRef}
-                contactRef={contactRef}
-              />
               <AnimatedContainer>
                 <WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
               </AnimatedContainer>

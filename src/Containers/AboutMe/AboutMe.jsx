@@ -1,7 +1,7 @@
 import './AboutMe.css';
 import { forwardRef } from 'react';
 
-function AboutMe({ props }, ref) {
+function AboutMe({ goToRef, contactRef }, ref) {
   return (
     <div className='aboutme-container container' ref={ref}>
       <div className='aboutme-content'>
@@ -33,7 +33,9 @@ function AboutMe({ props }, ref) {
 
       <div className='aboutme-buttons'>
         <button className='btn btn-primary'>Download CV</button>
-        <button className='btn btn-secondary'>Contact</button>
+        <button className='btn btn-secondary' onClick={() => goToRef(contactRef)}>
+          Contact
+        </button>
       </div>
     </div>
   );

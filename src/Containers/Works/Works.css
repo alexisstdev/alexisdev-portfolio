@@ -1,7 +1,7 @@
 .works h2 {
   margin-top: 2rem;
   margin-bottom: 4rem;
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   text-align: center;
 }
 

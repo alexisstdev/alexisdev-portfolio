@@ -7,6 +7,7 @@
   --text-primary: #eceff4;
   --accent-color: #79b8ca;
   --text-secondary: #a3abb2;
+  --dark-secondary: #171f26;
 
   --text-xs: clamp(1rem, calc(1rem + 0.03vw), 1.3rem);
   --text-sm: clamp(1.3rem, calc(1.3rem + 0.11vw), 1.6rem);
