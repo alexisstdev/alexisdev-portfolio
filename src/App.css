@@ -21,3 +21,10 @@ body {
 .accent-color {
   color: var(--accent-color);
 }
+
+.footer p {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+}

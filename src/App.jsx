@@ -9,6 +9,7 @@ import AnimatedContainer from './Components/AnimatedContainer';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer';
 
 export default function App() {
   const location = useLocation();
@@ -62,6 +63,7 @@ export default function App() {
           }
         />
       </Routes>
+      <Footer />
     </AnimatePresence>
   );
 }

@@ -17,6 +17,9 @@ export default function Work({ workData }) {
               <li key={index}>{tag}</li>
             ))}
           </ul>
+          <div className='view-details'>
+            <i className='fa-solid fa-arrow-up-right-from-square'></i>
+          </div>
         </div>
       </Link>
     </div>
