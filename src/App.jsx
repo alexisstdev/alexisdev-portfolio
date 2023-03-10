@@ -48,6 +48,7 @@ export default function App() {
                 <AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
                 <Works ref={worksRef} />
                 <Contact ref={contactRef} />
+                <Footer />
               </AnimatedContainer>
             </>
           }
@@ -58,12 +59,12 @@ export default function App() {
             <>
               <AnimatedContainer>
                 <WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
+                <Footer />
               </AnimatedContainer>
             </>
           }
         />
       </Routes>
-      <Footer />
     </AnimatePresence>
   );
 }
