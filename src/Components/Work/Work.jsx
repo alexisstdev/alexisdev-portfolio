@@ -21,7 +21,7 @@ export default function Work({ workData }) {
             <i className='fa-solid fa-arrow-up-right-from-square'></i>
           </div>
         </div>
-      </Link>
+      </Link> 
     </div>
   );
 }
