@@ -10,6 +10,7 @@ import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer';
+import NotFound from './Components/NotFound';
 
 export default function App() {
   const location = useLocation();
@@ -64,6 +65,7 @@ export default function App() {
             </>
           }
         />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );
