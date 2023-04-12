@@ -28,3 +28,15 @@ body {
   color: var(--text-secondary);
   font-size: var(--text-xs);
 }
+
+.notfound {
+  margin-top: 8rem;
+}
+
+.notfound > h1 {
+  font-size: var(--text-2xl);
+}
+
+.notfound > p {
+  font-size: var(--text-sm);
+}
