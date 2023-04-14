@@ -3,8 +3,13 @@ import './Navbar.css';
 
 export default function Navbar({ goToRef, worksRef, contactRef, homeRef }) {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const toggleMenu = (isOpenCheck) => {
+    if (!isOpenCheck) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+    setIsOpen(!isOpenCheck);
   };
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [scrollDirection, setScrollDirection] = useState('none');
@@ -28,7 +33,7 @@ export default function Navbar({ goToRef, worksRef, contactRef, homeRef }) {
   }, [lastScrollTop]);
 
   function handleClick(ref) {
-    toggleMenu();
+    toggleMenu(true);
     goToRef(ref);
   }
 
@@ -51,7 +56,7 @@ export default function Navbar({ goToRef, worksRef, contactRef, homeRef }) {
             Contact
           </a>
         </ul>
-        <div className='navbar-toggle' onClick={toggleMenu}>
+        <div className='navbar-toggle' onClick={() => toggleMenu(isOpen)}>
           <i className={`fas fa-bars ${isOpen ? 'is-active' : ''}`}></i>
         </div>
       </nav>
