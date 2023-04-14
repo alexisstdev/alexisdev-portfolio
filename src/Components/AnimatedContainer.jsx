@@ -13,7 +13,7 @@ export default function AnimatedContainer({ children }) {
         initial='initial'
         animate='animate'
         exit='exit'
-        transition={{ duration: 0.15 }}
+        transition={{ duration: 0.3 }}
       >
         {children}
       </motion.div>

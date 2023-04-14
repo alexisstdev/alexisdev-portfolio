@@ -4,11 +4,6 @@ import './Navbar.css';
 export default function Navbar({ goToRef, worksRef, contactRef, homeRef }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
-    if (!isOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
     setIsOpen(!isOpen);
   };
   const [lastScrollTop, setLastScrollTop] = useState(0);

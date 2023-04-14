@@ -43,24 +43,24 @@ export default function WorkDetails({ goToRef, worksRef, homeRef }) {
           <div className='work-details-links'>
             {work.github && (
               <a href={work.github} target='_blank'>
-                View on GitHub &nbsp;<i class='fa-solid fa-arrow-right'></i>
+                View on GitHub &nbsp;<i className='fa-solid fa-arrow-right'></i>
               </a>
             )}
             {work.live && (
               <a href={work.live} target='_blank'>
-                View live &nbsp;<i class='fa-solid fa-arrow-right'></i>
+                View live &nbsp;<i className='fa-solid fa-arrow-right'></i>
               </a>
             )}
           </div>
         </div>
       </div>
-      {work.images && work.images.map((image) => <img src={image} alt='' />)}
+      {work.images && work.images.map((image) => <img src={image} alt='' key={image} />)}
       <div className='work-details-controls'>
         <Link to={`/work/${prevWork}`}>
-          <i class='fa-solid fa-arrow-left'></i>
+          <i className='fa-solid fa-arrow-left'></i>
         </Link>
         <Link to={`/work/${nextWork}`}>
-          <i class='fa-solid fa-arrow-right'></i>
+          <i className='fa-solid fa-arrow-right'></i>
         </Link>
       </div>
     </div>

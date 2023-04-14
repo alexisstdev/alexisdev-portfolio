@@ -32,41 +32,43 @@ export default function App() {
   }
 
   return (
-    <AnimatePresence mode='wait'>
+    <>
       <Navbar
         goToRef={goToRef}
         homeRef={homeRef}
         worksRef={worksRef}
         contactRef={contactRef}
       />
-      <Routes location={location} key={location.pathname}>
-        <Route
-          exact
-          path='/'
-          element={
-            <>
-              <AnimatedContainer>
-                <AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
-                <Works ref={worksRef} />
-                <Contact ref={contactRef} />
-                <Footer />
-              </AnimatedContainer>
-            </>
-          }
-        />
-        <Route
-          path='/work/:path'
-          element={
-            <>
-              <AnimatedContainer>
-                <WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
-                <Footer />
-              </AnimatedContainer>
-            </>
-          }
-        />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route
+            exact
+            path='/'
+            element={
+              <>
+                <AnimatedContainer>
+                  <AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
+                  <Works ref={worksRef} />
+                  <Contact ref={contactRef} />
+                  <Footer />
+                </AnimatedContainer>
+              </>
+            }
+          />
+          <Route
+            path='/work/:path'
+            element={
+              <>
+                <AnimatedContainer>
+                  <WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
+                  <Footer />
+                </AnimatedContainer>
+              </>
+            }
+          />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }

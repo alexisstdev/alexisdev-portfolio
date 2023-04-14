@@ -130,4 +130,7 @@
   .aboutme-buttons {
     flex-direction: column;
   }
+  .aboutme-buttons a {
+    width: 100%;
+  }
 }
