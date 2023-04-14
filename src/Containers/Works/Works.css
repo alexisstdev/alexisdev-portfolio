@@ -1,12 +1,12 @@
 .works h2 {
   margin-top: 2rem;
   margin-bottom: 4rem;
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
   text-align: center;
 }
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
   gap: 2rem;
 }

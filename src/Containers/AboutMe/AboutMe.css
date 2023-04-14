@@ -27,11 +27,12 @@
 .aboutme-info > p {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+  margin-top: 0.5rem;
 }
 
 .aboutme-info > h1 {
   margin-bottom: 0;
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
   line-height: 4rem;
   font-weight: 600;
 }
@@ -85,12 +86,18 @@
   background-color: var(--dark-secondary);
   color: var(--text-secondary);
 }
+
 .aboutme-buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
   margin-top: 4rem;
+}
+
+.aboutme-buttons a {
+  text-decoration: none;
+  color: var(--bgcolor);
 }
 
 @media screen and (max-width: 768px) {

@@ -13,18 +13,13 @@ function AboutMe({ goToRef, contactRef }, ref) {
           <p>Software Developer</p>
           <ul className='social-links'>
             <li>
-              <a href='https://github.com' target='_blank'>
+              <a href='https://github.com/alexisstdev' target='_blank'>
                 <i className='fab fa-github'></i>
               </a>
             </li>
             <li>
-              <a href='https://linkedin.com' target='_blank'>
+              <a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
                 <i className='fab fa-linkedin'></i>
-              </a>
-            </li>
-            <li>
-              <a href='https://gmail.com' target='_blank'>
-                <i className='far fa-envelope'></i>
               </a>
             </li>
           </ul>
@@ -32,7 +27,12 @@ function AboutMe({ goToRef, contactRef }, ref) {
       </div>
 
       <div className='aboutme-buttons'>
-        <button className='btn btn-primary'>Download CV</button>
+        <a
+          href='https://drive.google.com/file/d/1vI0GaeVTLrWRtfM0Gc6ZNjgaXHIW_wT9/view?usp=sharing'
+          target='_blank'
+        >
+          <button className='btn btn-primary'>View CV</button>
+        </a>
         <button className='btn btn-secondary' onClick={() => goToRef(contactRef)}>
           Contact
         </button>

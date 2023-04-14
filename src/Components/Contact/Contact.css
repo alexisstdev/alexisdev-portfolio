@@ -16,7 +16,7 @@
 
 .contact-info > h2 {
   margin-bottom: 2rem;
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
 }
 
 .contact-info > h3 {
@@ -61,6 +61,7 @@
   margin-bottom: 1.6rem;
   max-width: 100%;
   min-width: 100%;
+  resize: none;
 }
 
 .form-group input:focus,

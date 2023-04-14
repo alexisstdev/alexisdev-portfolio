@@ -35,17 +35,17 @@ function Contact({ props }, ref) {
         </div>
         <ul className='social-links'>
           <li>
-            <a href='https://github.com' target='_blank'>
+            <a href='https://github.com/alexisstdev' target='_blank'>
               <i className='fab fa-github'></i>
             </a>
           </li>
           <li>
-            <a href='https://linkedin.com' target='_blank'>
+            <a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
               <i className='fab fa-linkedin'></i>
             </a>
           </li>
           <li>
-            <a href='https://gmail.com' target='_blank'>
+            <a href='mailto:alexissanmiguel03@gmail.com'>
               <i className='far fa-envelope'></i>
             </a>
           </li>
@@ -53,13 +53,13 @@ function Contact({ props }, ref) {
       </div>
       <form className='contact-form' onSubmit={handleSubmit} ref={form}>
         <div className='form-group'>
-          <input type='text' name='user_name' placeholder='Name' />
+          <input type='text' name='user_name' placeholder='Name' required />
         </div>
         <div className='form-group'>
-          <input type='email' name='user_email' placeholder='Email' />
+          <input type='email' name='user_email' placeholder='Email' required />
         </div>
         <div className='form-group'>
-          <textarea name='message' placeholder='Message' />
+          <textarea name='message' placeholder='Message' required />
         </div>
         <button type='submit'>Send</button>
       </form>

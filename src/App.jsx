@@ -55,7 +55,7 @@ export default function App() {
           }
         />
         <Route
-          path='/work/:id'
+          path='/work/:path'
           element={
             <>
               <AnimatedContainer>

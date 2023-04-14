@@ -2,13 +2,10 @@ import './Work.css';
 import { Link } from 'react-router-dom';
 
 export default function Work({ workData }) {
-  function handleClick() {
-    window.location.hash = '';
-  }
   return (
     <div className='work-item'>
-      <Link to={`work/${workData.id}`} onClick={handleClick}>
-        <img src={workData.image} alt={workData.name} className='work-image' />
+      <Link to={`work/${workData.path}`} onClick={() => window.scrollTo(0, 0)}>
+        <img src={workData.images[0]} alt={workData.name} className='work-image' />
         <div className='work-overlay'>
           <h3>{workData.name}</h3>
           <p>{workData.description}</p>
@@ -21,7 +18,7 @@ export default function Work({ workData }) {
             <i className='fa-solid fa-arrow-up-right-from-square'></i>
           </div>
         </div>
-      </Link> 
+      </Link>
     </div>
   );
 }
