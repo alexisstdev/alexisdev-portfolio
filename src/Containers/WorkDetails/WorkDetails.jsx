@@ -43,12 +43,12 @@ export default function WorkDetails({ goToRef, worksRef, homeRef }) {
           <div className='work-details-links'>
             {work.github && (
               <a href={work.github} target='_blank'>
-                View on GitHub &nbsp;<i className='fa-solid fa-arrow-right'></i>
+                <i className='fab fa-github'></i>GitHub
               </a>
             )}
             {work.live && (
               <a href={work.live} target='_blank'>
-                View live &nbsp;<i className='fa-solid fa-arrow-right'></i>
+                <i className='fa-solid fa-eye'></i>Live
               </a>
             )}
           </div>

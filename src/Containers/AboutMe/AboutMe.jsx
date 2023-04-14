@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 function AboutMe({ goToRef, contactRef }, ref) {
   return (
-    <div className='aboutme-container container' ref={ref}>
+    <div className='aboutme-container container' ref={ref} id='home'>
       <div className='aboutme-content'>
         <img src='me.jpg' alt='alexis-image' />
         <div className='aboutme-info'>

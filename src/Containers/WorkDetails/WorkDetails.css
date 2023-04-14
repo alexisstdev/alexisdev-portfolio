@@ -80,6 +80,14 @@
 .work-details-links a {
   text-decoration: none;
   transition: all 0.2s ease;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.work-details-links i {
+  margin-right: 0.7rem;
+  font-size: var(--text-sm);
 }
 
 .work-details-links a:hover {
@@ -98,7 +106,6 @@
 
   .work-details-links {
     flex-direction: row;
-    justify-content: center;
     gap: 3rem;
     margin-top: 2rem;
     margin-bottom: -3rem;

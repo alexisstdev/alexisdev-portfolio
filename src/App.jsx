@@ -27,7 +27,8 @@ export default function App() {
     }
     navigate('/');
     setTimeout(() => {
-      scroll();
+      if (ref.current.id === 'home') window.scrollTo(0, 0);
+      else scroll();
     }, 500);
   }
 
