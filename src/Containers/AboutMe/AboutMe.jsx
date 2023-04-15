@@ -8,7 +8,7 @@ function AboutMe({ goToRef, contactRef }, ref) {
         <img src='me.jpg' alt='alexis-image' />
         <div className='aboutme-info'>
           <h1>
-            Hi, i'm <span>Alexis</span>
+            Hi, I'm <span>Alexis</span>
           </h1>
           <p>Software Developer</p>
           <ul className='social-links'>

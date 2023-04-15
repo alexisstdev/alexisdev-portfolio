@@ -38,7 +38,10 @@ export default function WorkDetails({ goToRef, worksRef, homeRef }) {
         <div className='work-details-description-tags'>
           <h3>Technologies</h3>
           {work.tags.map((tag, index) => (
-            <span key={index}>{tag}, </span>
+            <span key={index}>
+              {tag}
+              {index === work.tags.length - 1 ? '.' : ', '}
+            </span>
           ))}
           <div className='work-details-links'>
             {work.github && (
@@ -55,6 +58,11 @@ export default function WorkDetails({ goToRef, worksRef, homeRef }) {
         </div>
       </div>
       {work.images && work.images.map((image) => <img src={image} alt='' key={image} />)}
+      {work.video && (
+        <video controls autoplay loop>
+          <source src={work.video} type='video/mp4' />
+        </video>
+      )}
       <div className='work-details-controls'>
         <Link to={`/work/${prevWork}`}>
           <i className='fa-solid fa-arrow-left'></i>

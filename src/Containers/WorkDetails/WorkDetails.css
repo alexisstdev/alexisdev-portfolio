@@ -139,3 +139,8 @@
 .work-details-controls a:hover {
   background-color: rgb(22, 22, 22);
 }
+
+video {
+  max-width: 100%;
+  margin-top: 1rem;
+}

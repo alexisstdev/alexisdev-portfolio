@@ -5,7 +5,7 @@ export default function Work({ workData }) {
   return (
     <div className='work-item'>
       <Link to={`work/${workData.path}`} onClick={() => window.scrollTo(0, 0)}>
-        <img src={workData.images[0]} alt={workData.name} className='work-image' />
+        <img src={workData.preview} alt={workData.name} className='work-image' />
         <div className='work-overlay'>
           <h3>{workData.name}</h3>
           <p>{workData.description}</p>
