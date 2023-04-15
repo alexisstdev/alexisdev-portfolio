@@ -24,48 +24,6 @@ export const worksData = [
     description: 'Binary search tree visualizer and traversal algorithms viewer',
     tags: ['C#', 'Windows Forms', 'SVG'],
     longDescription:
-      'I have developed a binary search tree visualizer which allows users to add, remove and clear nodes from the tree, as well as visualize different traversal algorithms. This project was built using C# Windows Forms and SVGs to render the visual representation of the tree. The binary search tree data structure is widely used in computer science and this tool can help users to better understand its behavior and operations in an intuitive way.',
-  },
-  {
-    id: 3,
-    path: 'Project3',
-    name: 'Project 3',
-    preview: '/works/alexis-ai/1.png',
-    images: ['https://tamalsen.dev/wp-content/uploads/2021/11/2021-11-09_183502.jpg'],
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe accusamus eos modi iste nisi sed fugit laborum quis iusto.',
-    tags: ['Javascript', 'React', 'Next Js'],
-    github: 'https://github.com',
-    live: '#',
-    longDescription:
-      'Lorem ipsum dolor sit amet, adipisicing elit. Saepe accjfsdhf hsdfuih sduifhuis dhfjsdhf jksdhfjk sdhf jksdhf jksdhf kjsdh fkjsdh fksd fhjk fhkusamus modi iste nisi sed molestias fugit laborum iusto.',
-  },
-  {
-    id: 4,
-    path: 'Project4',
-    name: 'Project 4',
-    preview: '/works/alexis-ai/1.png',
-    images: ['https://tamalsen.dev/wp-content/uploads/2021/11/2021-11-09_183502.jpg'],
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe  eos modi iste nisi sed molestias fugit laborum iusto.',
-    tags: ['Javascript', 'React', 'Next Js'],
-    github: 'https://github.com',
-    live: '#',
-    longDescription:
-      'Lorem ipsum dolor sit amet, adipisicing elit. Saepe accjfsdhf hsdfuih sduifhuis dhfjsdhf jksdhfjk sdhf jksdhf jksdhf kjsdh fkjsdh fksd fhjk fhkusamus modi iste nisi sed molestias fugit laborum iusto.',
-  },
-  {
-    id: 5,
-    path: 'Project5',
-    name: 'Project 5',
-    preview: '/works/alexis-ai/1.png',
-    images: ['https://tamalsen.dev/wp-content/uploads/2021/11/2021-11-09_183502.jpg'],
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe accusamus eos modi iste nisi sed molestias fugit laborum quis iusto.',
-    tags: ['Javascript', 'React', 'Next Js'],
-    github: 'https://github.com',
-    live: '#',
-    longDescription:
-      'Lorem ipsum dolor sit amet, adipisicing elit. Saepe accjfsdhf hsdfuih sduifhuis dhfjsdhf jksdhfjk sdhf jksdhf jksdhf kjsdh fkjsdh fksd fhjk fhkusamus modi iste nisi sed molestias fugit laborum iusto.',
+      'Binary search tree visualizer which allows users to add, remove and clear nodes from the tree, as well as visualize different traversal algorithms. This project was built using C# Windows Forms and SVGs to render the visual representation of the tree. The binary search tree data structure is widely used in computer science and this tool can help users to better understand its behavior and operations in an intuitive way.',
   },
 ];

@@ -28,10 +28,10 @@ function AboutMe({ goToRef, contactRef }, ref) {
 
       <div className='aboutme-buttons'>
         <a
-          href='https://drive.google.com/file/d/1vI0GaeVTLrWRtfM0Gc6ZNjgaXHIW_wT9/view?usp=sharing'
+          href='https://drive.google.com/file/d/1hq7FlfFQXqsa7zTpFAzfqbRl96p-PL2G/view?usp=sharing'
           target='_blank'
         >
-          <button className='btn btn-primary'>View CV</button>
+          <button className='btn btn-primary'>View resume</button>
         </a>
         <button className='btn btn-secondary' onClick={() => goToRef(contactRef)}>
           Contact
