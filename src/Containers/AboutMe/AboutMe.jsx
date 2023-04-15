@@ -28,7 +28,7 @@ function AboutMe({ goToRef, contactRef }, ref) {
 
       <div className='aboutme-buttons'>
         <a
-          href='https://drive.google.com/file/d/1hq7FlfFQXqsa7zTpFAzfqbRl96p-PL2G/view?usp=sharing'
+          href='https://drive.google.com/file/d/1b8K0LEv_PwUaNEd-fPjfQHmAgZDDHzZ7/view?usp=sharing'
           target='_blank'
         >
           <button className='btn btn-primary'>View resume</button>
