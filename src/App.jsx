@@ -11,65 +11,67 @@ import { useNavigate } from 'react-router-dom';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer';
 import NotFound from './Components/NotFound';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
-  const location = useLocation();
-  const worksRef = useRef();
-  const homeRef = useRef();
-  const contactRef = useRef();
-  const navigate = useNavigate();
+	const location = useLocation();
+	const worksRef = useRef();
+	const homeRef = useRef();
+	const contactRef = useRef();
+	const navigate = useNavigate();
 
-  function goToRef(ref) {
-    const scroll = () => ref.current?.scrollIntoView({ behavior: 'smooth' });
-    if (location.pathname === '/') {
-      scroll();
-      return;
-    }
-    navigate('/');
-    setTimeout(() => {
-      if (ref.current.id === 'home') window.scrollTo(0, 0);
-      else scroll();
-    }, 500);
-  }
+	function goToRef(ref) {
+		const scroll = () => ref.current?.scrollIntoView({ behavior: 'smooth' });
+		if (location.pathname === '/') {
+			scroll();
+			return;
+		}
+		navigate('/');
+		setTimeout(() => {
+			if (ref.current.id === 'home') window.scrollTo(0, 0);
+			else scroll();
+		}, 500);
+	}
 
-  return (
-    <>
-      <Navbar
-        goToRef={goToRef}
-        homeRef={homeRef}
-        worksRef={worksRef}
-        contactRef={contactRef}
-      />
-      <AnimatePresence mode='wait'>
-        <Routes location={location} key={location.pathname}>
-          <Route
-            exact
-            path='/'
-            element={
-              <>
-                <AnimatedContainer>
-                  <AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
-                  <Works ref={worksRef} />
-                  <Contact ref={contactRef} />
-                  <Footer />
-                </AnimatedContainer>
-              </>
-            }
-          />
-          <Route
-            path='/work/:path'
-            element={
-              <>
-                <AnimatedContainer>
-                  <WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
-                  <Footer />
-                </AnimatedContainer>
-              </>
-            }
-          />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </AnimatePresence>
-    </>
-  );
+	return (
+		<>
+			<Navbar
+				goToRef={goToRef}
+				homeRef={homeRef}
+				worksRef={worksRef}
+				contactRef={contactRef}
+			/>
+			<AnimatePresence mode='wait'>
+				<Routes location={location} key={location.pathname}>
+					<Route
+						exact
+						path='/'
+						element={
+							<>
+								<AnimatedContainer>
+									<AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
+									<Works ref={worksRef} />
+									<Contact ref={contactRef} />
+									<Footer />
+								</AnimatedContainer>
+							</>
+						}
+					/>
+					<Route
+						path='/work/:path'
+						element={
+							<>
+								<AnimatedContainer>
+									<WorkDetails goToRef={goToRef} homeRef={homeRef} worksRef={worksRef} />
+									<Footer />
+								</AnimatedContainer>
+							</>
+						}
+					/>
+					<Route path='*' element={<NotFound />} />
+				</Routes>
+			</AnimatePresence>
+			<Analytics />
+		</>
+	);
 }
