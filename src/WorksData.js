@@ -33,6 +33,7 @@ export const worksData = [
 		preview: '/works/weatherapp/1.png',
 		images: ['/works/weatherapp/1.png', '/works/weatherapp/2.png'],
 		github: 'https://github.com/alexisstdev/weather-app',
+		live: 'https://weatherst.vercel.app/',
 		description: 'Weather App that allows users to view forecasts for various locations.',
 		tags: ['React', 'Redux', 'Openweathermap', 'Google maps api'],
 		longDescription:
