@@ -24,15 +24,9 @@
 	color: var(--accent-color);
 }
 
-.aboutme-info > p {
-	font-size: var(--text-sm);
-	color: var(--text-secondary);
-	margin-top: 0.5rem;
-}
-
 .aboutme-info > h1 {
 	margin-bottom: 0;
-	font-size: var(--text-3xl);
+	font-size: var(--text-2xl);
 	line-height: 4rem;
 	font-weight: 600;
 }
@@ -100,6 +94,10 @@
 	color: var(--bgcolor);
 }
 
+.aboutme-title {
+	color: var(--text-primary);
+}
+
 @media screen and (max-width: 768px) {
 	.aboutme-content {
 		flex-direction: column;
@@ -111,6 +109,9 @@
 	}
 	.aboutme-info {
 		text-align: center;
+	}
+	.aboutme-description {
+		text-align: left;
 	}
 	.aboutme-info > h1 {
 		margin-top: 0;

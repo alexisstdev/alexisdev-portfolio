@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
 :root {
-  --font-family: 'Outfit', sans-serif;
+	--font-family: 'Outfit', sans-serif;
 
-  --bgcolor: #0c151d;
-  --text-primary: #eceff4;
-  --accent-color: #79b8ca;
-  --text-secondary: #a3abb2;
-  --dark-secondary: #171f26;
+	--bgcolor: #111827;
+	--text-primary: #eceff4;
+	--accent-color: #79b8ca;
+	--text-secondary: #a3abb2;
+	--dark-secondary: #1e293b;
 
-  --text-xs: clamp(1rem, calc(1rem + 0.05vw), 1.3rem);
-  --text-sm: clamp(1.1rem, calc(1.1rem + 0.1vw), 1.6rem);
-  --text-base: clamp(1.6rem, calc(1.6rem + 0.2vw), 1.9rem);
-  --text-lg: clamp(1.9rem, calc(1.9rem + 0.4vw), 2.2rem);
-  --text-xl: clamp(2.2rem, calc(2.2rem + 0.6vw), 2.5rem);
-  --text-2xl: clamp(2.5rem, calc(2.5rem + 0.9vw), 2.8rem);
-  --text-3xl: clamp(2.8rem, calc(2.8rem + 1.5vw), 3.1rem);
+	--text-xs: clamp(1rem, calc(1rem + 0vw), 1.2rem);
+	--text-sm: clamp(0.9rem, calc(1rem + 0.5vw), 1.1rem);
+	--text-base: clamp(1.4rem, calc(1rem + 1vw), 1.8rem);
+	--text-lg: clamp(1.6rem, calc(1rem + 1.5vw), 2.2rem);
+	--text-xl: clamp(1.8rem, calc(1rem + 2vw), 2.6rem);
+	--text-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
+	--text-3xl: clamp(2.5rem, calc(1rem + 12.5vw), 3.2rem);
 }

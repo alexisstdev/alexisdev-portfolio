@@ -10,8 +10,8 @@ function AboutMe({ goToRef, contactRef }, ref) {
 					<h1>
 						Hi, I'm <span>Alexis</span>
 					</h1>
-					<p>Software Developer</p>
-					<p>
+					<p className='aboutme-title'>Software Developer</p>
+					<p className='aboutme-description'>
 						Deeply passionate about creating user experiences and web applications.
 						Dedicated to delivering exceptional results and committed to maintaining
 						meticulous attention to detail in all my works.

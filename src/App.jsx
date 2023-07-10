@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import WorkDetails from './Containers/WorkDetails/WorkDetails';
 import Navbar from './Components/Navbar/Navbar';
 import AboutMe from './Containers/AboutMe/AboutMe';
+import Experience from './Containers/Experience/Experience';
 import Works from './Containers/Works/Works';
 import { AnimatePresence } from 'framer-motion';
 import AnimatedContainer from './Components/AnimatedContainer';
@@ -15,8 +16,9 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
 	const location = useLocation();
-	const worksRef = useRef();
 	const homeRef = useRef();
+	const experienceRef = useRef();
+	const worksRef = useRef();
 	const contactRef = useRef();
 	const navigate = useNavigate();
 
@@ -40,6 +42,7 @@ export default function App() {
 				homeRef={homeRef}
 				worksRef={worksRef}
 				contactRef={contactRef}
+				experienceRef={experienceRef}
 			/>
 			<AnimatePresence mode='wait'>
 				<Routes location={location} key={location.pathname}>
@@ -51,6 +54,7 @@ export default function App() {
 								<AnimatedContainer>
 									<AboutMe ref={homeRef} goToRef={goToRef} contactRef={contactRef} />
 									<Works ref={worksRef} />
+									<Experience ref={experienceRef} />
 									<Contact ref={contactRef} />
 									<Footer />
 								</AnimatedContainer>

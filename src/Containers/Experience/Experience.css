@@ -1,0 +1,46 @@
+.experience {
+	display: flex;
+	justify-content: space-between;
+}
+
+.experience-details {
+	flex: 0.8;
+}
+
+.experience-title > h1 {
+	margin: 0;
+	font-size: var(--text-base);
+	width: 16rem;
+}
+
+.experience-details > p {
+	margin-top: 0;
+}
+
+hr {
+	margin-block: 2rem;
+	border-color: var(--text-secondary);
+	opacity: 0.6;
+}
+
+.experience-tech {
+	color: var(--text-primary);
+	margin-top: 1rem;
+	font-size: var(--text-sm);
+}
+
+.company {
+	color: var(--text-primary);
+}
+
+.time {
+	font-size: var(--text-xs);
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	.experience {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
