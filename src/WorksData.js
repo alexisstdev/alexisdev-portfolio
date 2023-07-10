@@ -30,7 +30,7 @@ export const worksData = [
 		<p>One of the key features is the QR code scanning functionality. Members can conveniently use their phones to scan QR codes associated with a lodge, allowing them to keep track of their attendances and maintain a digital register.</p>
 		<p>The frontend, built with React, Redux, Chakra UI, and React Router, provides an intuitive interface with a responsive and user-friendly design. Administrators can easily navigate and perform CRUD operations to manage lodges and members effectively.</p>
 		<p>The backend, powered by Node.js and Express, along with a MySQL database, provides the necessary API to support the frontend functionalities. It utilizes JSON Web Tokens (JWT) for secure user authentication and authorization.</p>
-		<p>The project is currently in progress and, due to client confidentiality, I am unable to share the source. However, I am working on a demo version.</p>`,
+		<p>Due to client confidentiality, I am unable to share the source. However, I am working on a demo version.</p>`,
 	},
 	{
 		id: 3,
