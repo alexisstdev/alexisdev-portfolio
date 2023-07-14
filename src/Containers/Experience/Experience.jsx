@@ -1,11 +1,13 @@
+import { RefsContext } from '../../Components/RefsProvider';
 import './Experience.css';
-import { forwardRef } from 'react';
+import { forwardRef, useContext } from 'react';
 
-function Experience({ props }, ref) {
+function Experience() {
+	const { experienceRef } = useContext(RefsContext);
+
 	return (
-		<section className='container' ref={ref}>
+		<section className='container' ref={experienceRef}>
 			<h2 className='section-header'>Work experience</h2>
-
 			<article className='experience'>
 				<div className='experience-title'>
 					<h1>Junior Developer</h1>

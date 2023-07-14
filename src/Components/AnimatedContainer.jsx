@@ -8,7 +8,7 @@ export default function AnimatedContainer({ children }) {
 	};
 	return (
 		<>
-			<motion.div
+			<motion.main
 				variants={slide}
 				initial='initial'
 				animate='animate'
@@ -17,7 +17,7 @@ export default function AnimatedContainer({ children }) {
 				className='content'
 			>
 				{children}
-			</motion.div>
+			</motion.main>
 		</>
 	);
 }

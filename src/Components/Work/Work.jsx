@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Work({ workData }) {
 	return (
-		<div className='work-item'>
+		<article className='work-item'>
 			<Link to={`work/${workData.path}`} onClick={() => window.scrollTo(0, 0)}>
 				<img src={workData.preview} alt={workData.name} className='work-image' />
 				<div className='work-overlay'>
@@ -19,6 +19,6 @@ export default function Work({ workData }) {
 					</div>
 				</div>
 			</Link>
-		</div>
+		</article>
 	);
 }

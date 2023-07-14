@@ -16,6 +16,7 @@
 	width: 16rem;
 	border-radius: 50%;
 }
+
 .aboutme-info {
 	width: 100%;
 }
@@ -31,8 +32,13 @@
 	font-weight: 600;
 }
 
+.aboutme-title {
+	font-size: var(--text-sm);
+	margin-top: 0.7rem;
+	font-weight: normal;
+}
+
 .social-links {
-	margin-top: 1.5rem;
 	display: flex;
 	align-items: center;
 	list-style: none;
@@ -64,7 +70,7 @@
 	color: var(--bgcolor);
 	border: none;
 	border-radius: 7px;
-	width: 16rem;
+	width: 100%;
 	padding-block: 0.8rem;
 	cursor: pointer;
 	transition: all 0.2s ease;
@@ -84,14 +90,14 @@
 .aboutme-buttons {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: 4rem;
-	margin-top: 4rem;
+	gap: 2rem;
+	margin-top: 2rem;
 }
 
 .aboutme-buttons a {
 	text-decoration: none;
 	color: var(--bgcolor);
+	text-align: center;
 }
 
 .aboutme-title {
@@ -103,21 +109,22 @@
 		flex-direction: column;
 		margin-top: 0;
 	}
+
 	.aboutme-buttons {
 		gap: 2rem;
 		margin-top: 2rem;
 	}
+
 	.aboutme-info {
-		text-align: center;
+		margin-top: -2rem;
 	}
+
 	.aboutme-description {
 		text-align: left;
 	}
+
 	.aboutme-info > h1 {
 		margin-top: 0;
-	}
-	.social-links {
-		justify-content: center;
 	}
 }
 
@@ -128,9 +135,7 @@
 	.btn {
 		width: 100%;
 	}
-	.aboutme-buttons {
-		flex-direction: column;
-	}
+
 	.aboutme-buttons a {
 		width: 100%;
 	}

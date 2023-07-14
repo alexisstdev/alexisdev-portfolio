@@ -1,44 +1,13 @@
-import { useEffect, useState } from 'react';
 import './Navbar.css';
+import useNavbar from '../../Hooks/useNavbar';
+import useScrollToRef from '../../Hooks/useScrollToRef';
+import { useContext } from 'react';
+import { RefsContext } from '../RefsProvider';
 
-export default function Navbar({
-	goToRef,
-	worksRef,
-	contactRef,
-	homeRef,
-	experienceRef,
-}) {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const toggleMenu = (isOpenCheck) => {
-		if (!isOpenCheck) {
-			document.body.classList.add('no-scroll');
-		} else {
-			document.body.classList.remove('no-scroll');
-		}
-		setIsOpen(!isOpenCheck);
-	};
-
-	const [lastScrollTop, setLastScrollTop] = useState(0);
-	const [scrollDirection, setScrollDirection] = useState('none');
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const currentScrollTop = window.scrollY;
-
-			if (currentScrollTop > lastScrollTop) {
-				setScrollDirection('down');
-			} else {
-				setScrollDirection('up');
-			}
-			setLastScrollTop(currentScrollTop);
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, [lastScrollTop]);
+export default function Navbar() {
+	const { contactRef, worksRef, aboutMeRef, experienceRef } = useContext(RefsContext);
+	const { scrollDirection, isOpen, toggleMenu } = useNavbar();
+	const { goToRef } = useScrollToRef();
 
 	function handleClick(ref) {
 		toggleMenu(true);
@@ -46,15 +15,15 @@ export default function Navbar({
 	}
 
 	return (
-		<div className='navbar-container'>
+		<header className='navbar-container'>
 			<nav
 				className={`navbar ${scrollDirection === 'down' ? 'scroll-down' : 'scroll-up'}`}
 			>
-				<a className='navbar-logo' onClick={() => handleClick(homeRef)}>
+				<a className='navbar-logo' onClick={() => handleClick(aboutMeRef)}>
 					&lt;alexis.<span className='accent-color'>dev </span>/&gt;
 				</a>
 				<ul className={`navbar-menu ${isOpen ? 'is-open' : ''}`}>
-					<a className='navbar-link' onClick={() => handleClick(homeRef)}>
+					<a className='navbar-link' onClick={() => handleClick(aboutMeRef)}>
 						Home
 					</a>
 					<a className='navbar-link' onClick={() => handleClick(worksRef)}>
@@ -71,6 +40,6 @@ export default function Navbar({
 					<i className={`fas fa-bars ${isOpen ? 'is-active' : ''}`}></i>
 				</div>
 			</nav>
-		</div>
+		</header>
 	);
 }

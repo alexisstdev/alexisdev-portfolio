@@ -1,16 +1,19 @@
 .experience {
 	display: flex;
-	justify-content: space-between;
+	gap: 4rem;
 }
 
-.experience-details {
-	flex: 0.8;
+.experience-title {
+	flex: 0.4;
 }
 
 .experience-title > h1 {
 	margin: 0;
 	font-size: var(--text-base);
-	width: 16rem;
+}
+
+.experience-details {
+	flex: 0.6;
 }
 
 .experience-details > p {
@@ -39,6 +42,12 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
+	.experience {
+		gap: 1rem;
+	}
+	.experience-details > p {
+		margin-top: 0;
+	}
 	.experience {
 		flex-direction: column;
 		align-items: flex-start;

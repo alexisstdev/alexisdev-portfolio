@@ -2,11 +2,13 @@ import './WorkDetails.css';
 import { worksData } from '../../WorksData';
 import { Link, useParams } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
+import useScrollToRef from '../../Hooks/useScrollToRef';
 
-export default function WorkDetails({ goToRef, worksRef, homeRef }) {
+export default function WorkDetails({ worksRef, homeRef }) {
 	const { path } = useParams();
 	const workIndex = worksData.findIndex((work) => work.path === path);
 	const work = worksData[workIndex];
+	const { goToRef } = useScrollToRef();
 
 	if (workIndex === -1) {
 		return <NotFound />;
