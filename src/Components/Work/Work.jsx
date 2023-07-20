@@ -1,3 +1,4 @@
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import './Work.css';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +16,8 @@ export default function Work({ workData }) {
 						))}
 					</ul>
 					<div className='view-details'>
-						<i className='fa-solid fa-arrow-up-right-from-square'></i>
+						See details
+						<FaExternalLinkAlt size={14} />
 					</div>
 				</div>
 			</Link>

@@ -1,6 +1,7 @@
 import useScrollToRef from '../../Hooks/useScrollToRef';
 import { forwardRef, useContext } from 'react';
 import { RefsContext } from '../../Components/RefsProvider';
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import './AboutMe.css';
 
 function AboutMe() {
@@ -21,18 +22,14 @@ function AboutMe() {
 						Dedicated to delivering exceptional results and committed to maintaining
 						meticulous attention to detail in all my works.
 					</p>
-					<ul className='social-links'>
-						<li>
-							<a href='https://github.com/alexisstdev' target='_blank'>
-								<i className='fab fa-github' />
-							</a>
-						</li>
-						<li>
-							<a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
-								<i className='fab fa-linkedin' />
-							</a>
-						</li>
-					</ul>
+					<div className='social-links'>
+						<a href='https://github.com/alexisstdev' target='_blank'>
+							<FaGithub className='icon' />
+						</a>
+						<a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
+							<FaLinkedin className='icon' />
+						</a>
+					</div>
 					<footer className='aboutme-buttons'>
 						<a
 							href='https://drive.google.com/file/d/1b8K0LEv_PwUaNEd-fPjfQHmAgZDDHzZ7/view?usp=sharing'

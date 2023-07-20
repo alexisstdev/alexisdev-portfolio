@@ -2,6 +2,7 @@ import './Contact.css';
 import { useContext, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { RefsContext } from '../../Components/RefsProvider';
+import { FaEnvelope, FaGithub, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 
 export default function Contact() {
 	const form = useRef();
@@ -35,23 +36,17 @@ export default function Contact() {
 					<h3>Phone</h3>
 					<p>+52 867 255 3978</p>
 				</div>
-				<ul className='social-links'>
-					<li>
-						<a href='https://github.com/alexisstdev' target='_blank'>
-							<i className='fab fa-github' />
-						</a>
-					</li>
-					<li>
-						<a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
-							<i className='fab fa-linkedin' />
-						</a>
-					</li>
-					<li>
-						<a href='mailto:alexissanmiguel03@gmail.com'>
-							<i className='far fa-envelope' />
-						</a>
-					</li>
-				</ul>
+				<div className='social-links'>
+					<a href='https://github.com/alexisstdev' target='_blank'>
+						<FaGithub className='icon' />
+					</a>
+					<a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
+						<FaLinkedin className='icon' />
+					</a>
+					<a href='mailto:alexissanmiguel03@gmail.com'>
+						<FaEnvelope className='icon' />
+					</a>
+				</div>
 			</div>
 			<form className='contact-form' onSubmit={handleSubmit} ref={form}>
 				<div className='form-group'>

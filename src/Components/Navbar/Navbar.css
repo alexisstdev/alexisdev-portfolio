@@ -104,7 +104,7 @@
 
 	.navbar-link:hover {
 		color: var(--text-primary);
-		background-color: #171f26;
+		background-color: var(--dark-secondary);
 	}
 
 	.navbar-toggle {

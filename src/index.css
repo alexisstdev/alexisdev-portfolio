@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@font-face {
+	font-family: 'Outfit-Regular';
+	src: url('/src/assets/fonts/Outfit-Regular.woff2') format('woff2'),
+		url('/src/assets/fonts/Outfit-Regular.ttf') format('truetype');
+}
 
 :root {
-	--font-family: 'Outfit', sans-serif;
+	--font-family: 'Outfit-Regular', sans-serif;
 
 	--bgcolor: #111827;
 	--text-primary: #eceff4;

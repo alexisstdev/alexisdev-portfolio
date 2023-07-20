@@ -3,6 +3,14 @@ import { worksData } from '../../WorksData';
 import { Link, useParams } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
 import useScrollToRef from '../../Hooks/useScrollToRef';
+import {
+	FaArrowLeft,
+	FaArrowRight,
+	FaDesktop,
+	FaExternalLinkAlt,
+	FaGithub,
+	FaLink,
+} from 'react-icons/fa';
 
 export default function WorkDetails({ worksRef, homeRef }) {
 	const { path } = useParams();
@@ -47,13 +55,13 @@ export default function WorkDetails({ worksRef, homeRef }) {
 					))}
 					<div className='work-details-links'>
 						{work.github && (
-							<a href={work.github} target='_blank'>
-								<i className='fab fa-github'></i>GitHub
+							<a href={work.github} target='_blank' className='icon-link'>
+								<FaGithub size={24} /> GitHub
 							</a>
 						)}
 						{work.live && (
-							<a href={work.live} target='_blank'>
-								<i className='fa-solid fa-eye'></i>Live
+							<a href={work.live} target='_blank' className='icon-link'>
+								<FaDesktop size={24} /> Live
 							</a>
 						)}
 					</div>
@@ -61,16 +69,16 @@ export default function WorkDetails({ worksRef, homeRef }) {
 			</div>
 			{work.images && work.images.map((image) => <img src={image} alt='' key={image} />)}
 			{work.video && (
-				<video controls autoPlay loop>
+				<video controls>
 					<source src={work.video} type='video/mp4' />
 				</video>
 			)}
 			<div className='work-details-controls'>
 				<Link to={`/work/${prevWork}`}>
-					<i className='fa-solid fa-arrow-left'></i>
+					<FaArrowLeft />
 				</Link>
 				<Link to={`/work/${nextWork}`}>
-					<i className='fa-solid fa-arrow-right'></i>
+					<FaArrowRight />
 				</Link>
 			</div>
 		</div>

@@ -3,6 +3,7 @@ import useNavbar from '../../Hooks/useNavbar';
 import useScrollToRef from '../../Hooks/useScrollToRef';
 import { useContext } from 'react';
 import { RefsContext } from '../RefsProvider';
+import { FaBars } from 'react-icons/fa';
 
 export default function Navbar() {
 	const { contactRef, worksRef, aboutMeRef, experienceRef } = useContext(RefsContext);
@@ -37,7 +38,7 @@ export default function Navbar() {
 					</a>
 				</ul>
 				<div className='navbar-toggle' onClick={() => toggleMenu(isOpen)}>
-					<i className={`fas fa-bars ${isOpen ? 'is-active' : ''}`}></i>
+					<FaBars size={30} className={` ${isOpen ? 'is-active' : ''}`} />
 				</div>
 			</nav>
 		</header>

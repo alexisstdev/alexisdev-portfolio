@@ -41,7 +41,6 @@
 .social-links {
 	display: flex;
 	align-items: center;
-	list-style: none;
 	gap: 1.4rem;
 }
 
@@ -49,20 +48,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 2rem;
-	height: 2rem;
 	border-radius: 50%;
 	text-decoration: none;
-}
-
-.social-links i {
-	font-size: var(--text-base);
-	color: var(--text-secondary);
-	transition: all 0.2s ease-in-out;
-}
-
-.social-links i:hover {
-	color: whitesmoke;
 }
 
 .btn {
