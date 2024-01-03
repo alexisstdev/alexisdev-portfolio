@@ -14,11 +14,11 @@ export const handleFormSubmit = () => {
     emailjs
       .sendForm(serviceId, templateId, form, userId)
       .then(() => {
-        alert('Message sent');
+        alert('Message sent.');
       })
       .catch((error: Error) => {
         console.error(error);
-        alert('An error occurred, Please try again');
+        alert('An error occurred, Please try again.');
       })
       .finally(() => {
         form.reset();
