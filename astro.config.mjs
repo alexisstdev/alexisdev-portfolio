@@ -8,10 +8,5 @@ export default defineConfig({
   plugins: [preact()],
   integrations: [preact()],
   output: 'server',
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-    imageService: true,
-  }),
+  adapter: vercel(),
 });
