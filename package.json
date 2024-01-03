@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "0.3.4",
     "@astrojs/preact": "3.0.2",
+    "@astrojs/vercel": "^6.1.2",
     "@emailjs/browser": "3.10.0",
     "@fontsource-variable/onest": "5.0.2",
     "astro": "4.0.8",
