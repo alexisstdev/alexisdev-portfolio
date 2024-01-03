@@ -1,0 +1,218 @@
+---
+import IGithub from '../assets/icons/IGithub.astro';
+import IWeb from '../assets/icons/IWeb.astro';
+import Layout from '../layouts/Layout.astro';
+import type { ProjectItem } from '../types/types';
+import ProjectNav from './ProjectNav/ProjectNav';
+
+interface Props {
+  project: ProjectItem;
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={'Project | ' + project.title} description={project.description}>
+  <div class='content'>
+    <p class='category'>{project.category}</p>
+    <h1 class='name'>
+      {project.title}
+    </h1>
+    <div class='nav'>
+      <a href='/'>Home &nbsp;</a>
+      <span>
+        {'>'}
+        <a href='/#projects'>&nbsp; Projects &nbsp;</a>
+        {'>'}&nbsp; {project.title}
+      </span>
+    </div>
+    <div class='description-container'>
+      <div class='description' set:html={project.longDescription} />
+      <div class='description-tags'>
+        <h3>Tech Stack</h3>
+        <p class='work-tags'>
+          {project.tags.join(', ') + '.'}
+        </p>
+        <div class='links'>
+          {
+            project.github && (
+              <a href={project.github} target='_blank' class='icon-link'>
+                <IGithub />
+              </a>
+            )
+          }
+          {
+            project.live && (
+              <a href={project.live} target='_blank' class='icon-link'>
+                <IWeb />
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </div>
+    {project.component && <project.component />}
+    {
+      project.images &&
+        project.images.map((image, index) => (
+          <img
+            src={image}
+            alt={`Descriptive image number ${index} for ${project.title}`}
+          />
+        ))
+    }
+    {
+      project.video && (
+        <video controls>
+          <source src={project.video} type='video/mp4' />
+        </video>
+      )
+    }
+    <ProjectNav project={project} client:visible />
+  </div>
+</Layout>
+
+<style>
+  .content {
+    margin-top: 6rem;
+  }
+
+  .category {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+
+  .name {
+    font-size: var(--text-3xl);
+    text-decoration: none;
+  }
+
+  .name > a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .name > a:hover {
+    opacity: 0.85;
+  }
+
+  .nav {
+    font-size: var(--text-sm);
+    margin-top: 0.5rem;
+  }
+
+  .nav a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .nav a:hover {
+    color: var(--accent-color);
+  }
+
+  .description-container {
+    justify-content: space-between;
+    margin-top: 2rem;
+    display: flex;
+    font-size: var(--text-sm);
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    color: var(--text-secondary);
+    flex: 0.6;
+    line-height: 1.8rem;
+  }
+
+  .description-tags {
+    line-height: 1.8rem;
+    flex: 0.4;
+  }
+
+  .description-tags h3 {
+    border-top: 1px solid var(--text-secondary);
+    margin-top: 5px;
+    padding-top: 1rem;
+    font-size: var(--text-sm);
+  }
+
+  .work-tags {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .links {
+    margin-top: 1rem;
+    gap: 0.7rem;
+    display: flex;
+    font-size: var(--text-sm);
+    font-weight: bold;
+  }
+
+  .icon-link {
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-link:hover {
+    color: var(--accent-color);
+  }
+
+  .icon-link {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .content > img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .description-container {
+      flex-direction: column;
+    }
+
+    .links {
+      flex-direction: row;
+    }
+
+    .work-details > img {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    position: sticky;
+    bottom: 0;
+    padding: 0.5rem;
+    background-color: transparent;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+  }
+
+  .controls a {
+    border-radius: 50%;
+    background-color: black;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .controls a:hover {
+    background-color: rgb(22, 22, 22);
+  }
+
+  video {
+    width: 100%;
+    margin-top: 1rem;
+  }
+</style>

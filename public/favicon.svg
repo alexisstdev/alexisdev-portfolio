@@ -1,12 +1,13 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000"
+	height="1000">
 	<title>favicon</title>
 	<style>
 		.s0 {
-			fill: #0c151d
+		fill: #0c151d
 		}
 
 		.s1 {
-			fill: #79b8ca
+		fill: #79b8ca
 		}
 	</style>
 	<path id="Forma 1" class="s0"

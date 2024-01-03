@@ -1,0 +1,147 @@
+---
+import IMenu from '../assets/icons/IMenu.astro';
+const isOpen = false;
+---
+
+<header class='navbar-container'>
+  <nav class={`navbar`}>
+    <a class='navbar-logo' href='/#home' aria-label='Home'>
+      &lt;alexis.<span class='accent-color'>dev</span>/&gt;
+    </a>
+    <ul class={`navbar-menu ${isOpen ? 'is-open' : ''}`}>
+      <a class='navbar-link' href='#home'> Home</a>
+      <a class='navbar-link' href='#contact'> Contact</a>
+      <a class='navbar-link' href='#projects'> Projects</a>
+      <a class='navbar-link' href='#experience'> Experience</a>
+    </ul>
+    <div class='navbar-toggle'>
+      <IMenu class={` ${isOpen ? 'is-active' : ''}`} />
+    </div>
+  </nav>
+</header>
+
+<style>
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    max-width: 1150px;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 99;
+    background-color: var(--bgcolor);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar.scroll-down {
+    transform: translateY(-100%);
+  }
+
+  .navbar.scroll-up {
+    transform: translateY(0%);
+  }
+
+  .navbar-logo {
+    transition: all 0.2s ease;
+    font-size: var(--text-sm);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .navbar-logo:hover {
+    opacity: 0.85;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .navbar-link {
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .navbar-link:hover {
+    color: var(--accent-color);
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      margin-bottom: 5rem;
+    }
+    .navbar-menu {
+      background-color: var(--bgcolor);
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease-in-out;
+      gap: 0;
+    }
+
+    .navbar-menu.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    .navbar-link {
+      font-size: var(--text-base);
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+    }
+
+    .navbar-link:hover {
+      color: var(--text-primary);
+      background-color: var(--dark-secondary);
+    }
+
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar-toggle i {
+      font-size: 2rem;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .navbar-toggle i.is-active {
+      transform: rotate(90deg);
+    }
+  }
+</style>

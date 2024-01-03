@@ -1,0 +1,18 @@
+---
+import ProjectItemC from '../../components/ProjectItem.astro';
+import { PROJECTS } from '../../data/ProjectsData.astro';
+import type { ProjectItem } from '../../types/types';
+
+export function getStaticPaths() {
+  return PROJECTS.map((project) => ({
+    params: {
+      id: project.id,
+    },
+  }));
+}
+
+const { id } = Astro.params;
+const project = PROJECTS.find((project) => project.id === id) as ProjectItem;
+---
+
+<ProjectItemC project={project} />

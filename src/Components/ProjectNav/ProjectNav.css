@@ -1,0 +1,29 @@
+.work-details-controls {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem;
+  background-color: transparent;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+.work-details-controls a {
+  background-color: var(--dark-secondary);
+  border-radius: 50%;
+  padding: 0.4rem;
+  transition: all 0.2s ease-in-out;
+  display: grid;
+}
+
+.work-details-controls svg {
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.work-details-controls a:hover {
+  opacity: 0.8;
+}

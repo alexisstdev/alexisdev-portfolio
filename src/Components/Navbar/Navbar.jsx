@@ -1,46 +1,56 @@
+import useNavbar from '../../hooks/useNavbar';
 import './Navbar.css';
-import useNavbar from '../../Hooks/useNavbar';
-import useScrollToRef from '../../Hooks/useScrollToRef';
-import { useContext } from 'react';
-import { RefsContext } from '../RefsProvider';
-import { FaBars } from 'react-icons/fa';
 
 export default function Navbar() {
-	const { contactRef, worksRef, aboutMeRef, experienceRef } = useContext(RefsContext);
-	const { scrollDirection, isOpen, toggleMenu } = useNavbar();
-	const { goToRef } = useScrollToRef();
+  const { scrollDirection, isOpen, toggleMenu } = useNavbar();
 
-	function handleClick(ref) {
-		toggleMenu(true);
-		goToRef(ref);
-	}
+  const handleClick = () => {
+    toggleMenu(true);
+  };
 
-	return (
-		<header className='navbar-container'>
-			<nav
-				className={`navbar ${scrollDirection === 'down' ? 'scroll-down' : 'scroll-up'}`}
-			>
-				<a className='navbar-logo' onClick={() => handleClick(aboutMeRef)}>
-					&lt;alexis.<span className='accent-color'>dev </span>/&gt;
-				</a>
-				<ul className={`navbar-menu ${isOpen ? 'is-open' : ''}`}>
-					<a className='navbar-link' onClick={() => handleClick(aboutMeRef)}>
-						Home
-					</a>
-					<a className='navbar-link' onClick={() => handleClick(worksRef)}>
-						Projects
-					</a>
-					<a className='navbar-link' onClick={() => handleClick(experienceRef)}>
-						Experience
-					</a>
-					<a className='navbar-link' onClick={() => handleClick(contactRef)}>
-						Contact
-					</a>
-				</ul>
-				<div className='navbar-toggle' onClick={() => toggleMenu(isOpen)}>
-					<FaBars size={30} className={` ${isOpen ? 'is-active' : ''}`} />
-				</div>
-			</nav>
-		</header>
-	);
+  return (
+    <header className='navbar-container'>
+      <nav
+        className={`navbar ${scrollDirection === 'down' ? 'scroll-down' : 'scroll-up'}`}
+      >
+        <a className='navbar-logo' onClick={handleClick} href='/'>
+          <img src='/alexisdev-logo.svg' alt='alexisdev logo' />
+        </a>
+        <ul className={`navbar-menu ${isOpen ? 'is-open' : ''}`}>
+          <a className='navbar-link' onClick={handleClick} href='/'>
+            Home
+          </a>
+          <a className='navbar-link' onClick={handleClick} href='/#experience'>
+            Experience
+          </a>
+          <a className='navbar-link' onClick={handleClick} href='/#projects'>
+            Projects
+          </a>
+          <a className='navbar-link' onClick={handleClick} href='/#contact'>
+            Contact
+          </a>
+        </ul>
+        <div className='navbar-toggle' onClick={() => toggleMenu(isOpen)}>
+          <span className={` ${isOpen ? 'is-active' : ''}`}>
+            <svg
+              class='icon'
+              width='44'
+              height='44'
+              viewBox='0 0 24 24'
+              stroke-width='2'
+              stroke='currentColor'
+              fill='none'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+            >
+              <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+              <path d='M4 6l16 0'></path>
+              <path d='M4 12l16 0'></path>
+              <path d='M4 18l16 0'></path>
+            </svg>
+          </span>
+        </div>
+      </nav>
+    </header>
+  );
 }

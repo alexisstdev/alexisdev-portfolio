@@ -1,0 +1,85 @@
+---
+import { EXPERIENCE_ITEMS } from '../data/ExperienceItems';
+import SectionContainer from './SectionContainer.astro';
+---
+
+<SectionContainer title='Work Experience' id='experience'>
+  {
+    EXPERIENCE_ITEMS.map((item) => {
+      return (
+        <article>
+          <div class='info'>
+            <h1>{item.title}</h1>
+            <p class='role'>{item.role}</p>
+            <p class='time'>{item.time}</p>
+          </div>
+          <div class='details'>
+            <p>{item.description}</p>
+            <h3 class='tech-tags'>Tech Stack</h3>
+            <p>{item.techStack.join(', ') + '.'}</p>
+            <hr />
+          </div>
+        </article>
+      );
+    })
+  }
+</SectionContainer>
+
+<style>
+  article {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .info {
+    flex: 0.4;
+  }
+
+  .info > h1 {
+    margin: 0;
+    font-size: var(--text-base);
+  }
+
+  .details {
+    flex: 0.7;
+  }
+
+  .details > p {
+    margin-top: 0;
+  }
+
+  hr {
+    border-color: var(--text-secondary);
+    opacity: 0.6;
+    margin-top: 1rem;
+  }
+
+  .tech-tags {
+    color: var(--text-primary);
+    margin-top: 1rem;
+    font-size: var(--text-sm);
+  }
+
+  .role {
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+    margin-bottom: -0.4rem;
+  }
+
+  .time {
+    font-size: var(--text-xs);
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    article {
+      gap: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .details > p {
+      margin-top: 0;
+    }
+  }
+</style>

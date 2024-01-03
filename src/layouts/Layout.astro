@@ -1,0 +1,118 @@
+---
+import '@fontsource-variable/onest';
+import Navbar from '../components/Navbar/Navbar.jsx';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import type AboutMe from '../components/AboutMe.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+
+    <meta name='author' content='alexisdev' />
+    <meta name='description' content={description} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content='Personal Web Portfolio' />
+    <meta property='og:image' content='/preview.png' />
+    <meta property='og:site_name' content={title} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+
+  <body>
+    <Navbar client:only />
+    <slot />
+    <Footer />
+    <style is:global>
+      :root {
+        --font-family: 'Onest Variable', sans-serif;
+
+        --bgcolor: #111827;
+        --text-primary: #eceff4;
+        --accent-color: #79b8ca;
+        --text-secondary: #b8bec4;
+        --dark-secondary: #1e293b;
+
+        --text-xs: clamp(0.8rem, 1.25vw, 0.9rem);
+        --text-sm: clamp(1rem, 1.5vw, 1.1rem);
+        --text-base: clamp(1.2rem, 1.75vw, 1.6rem);
+        --text-lg: clamp(1.4rem, 2vw, 2rem);
+        --text-xl: clamp(1.6rem, 2.25vw, 2.4rem);
+        --text-2xl: clamp(1.8rem, 2.5vw, 2.8rem);
+        --text-3xl: clamp(2rem, 3vw, 3.2rem);
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        scroll-behavior: smooth;
+        color: var(--text-primary);
+      }
+
+      body {
+        background-color: var(--bgcolor);
+        /* background-image: radial-gradient(
+          ellipse 70% 40% at 50% -20%,
+          #79b8ca40,
+          rgba(255, 255, 255, 0)
+        );
+ */
+        color: var(--text-primary);
+        font-family: var(--font-family);
+        overflow-x: hidden;
+        max-width: 1150px;
+        margin: auto;
+        padding-inline: 1rem;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        margin: auto;
+      }
+
+      .accent-color {
+        color: var(--accent-color);
+      }
+
+      p {
+        line-height: 1.8rem;
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+      }
+
+      .icon {
+        transition: all 0.15s ease-in-out;
+        height: 2.4rem;
+        width: 2.4rem;
+        padding: 0.2rem;
+        border-radius: 50%;
+      }
+
+      a > .icon:hover {
+        stroke: var(--accent-color);
+      }
+
+      .icon-external-link {
+        height: 1.2rem;
+        width: 1.2em;
+      }
+    </style>
+  </body>
+</html>

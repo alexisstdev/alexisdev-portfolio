@@ -1,29 +1,22 @@
 {
-	"name": "alexisdev-portfolio",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@emailjs/browser": "3.10.0",
-		"@vercel/analytics": "1.0.0",
-		"framer-motion": "10.0.2",
-		"nodemailer": "6.9.1",
-		"normalize.css": "8.0.1",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-icons": "4.10.1",
-		"react-router-dom": "6.8.2"
-	},
-	"devDependencies": {
-		"@types/react": "18.0.27",
-		"@types/react-dom": "18.0.10",
-		"@vitejs/plugin-react": "3.1.0",
-		"dotenv": "16.0.3",
-		"vite": "4.4.4"
-	}
+  "name": "alexisdev-portfolio-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.3.4",
+    "@astrojs/preact": "3.0.2",
+    "@emailjs/browser": "3.10.0",
+    "@fontsource-variable/onest": "5.0.2",
+    "astro": "4.0.8",
+    "egalink-toasty.js": "^1.5.5",
+    "preact": "10.19.3",
+    "typescript": "5.3.3"
+  }
 }

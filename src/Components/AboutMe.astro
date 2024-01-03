@@ -1,0 +1,173 @@
+---
+import IGithub from '../assets/icons/IGithub.astro';
+import ILinkedin from '../assets/icons/ILinkedin.astro';
+---
+
+<section class='container' id='home'>
+  <div class='content'>
+    <img src='/me.jpg' alt='alexis-image' />
+    <div class='info'>
+      <h1>
+        Hi, I'm <span>Alexis</span>
+      </h1>
+      <h2 class='title'>Software Developer</h2>
+      <p class='description'>
+        Deeply passionate about creating user experiences and web applications. Dedicated
+        to delivering exceptional results and committed to maintaining meticulous
+        attention to detail in all my works.
+      </p>
+      <div class='social-links'>
+        <a href='https://github.com/alexisstdev' target='_blank'>
+          <IGithub />
+        </a>
+        <a href='https://www.linkedin.com/in/alexisstdev/' target='_blank'>
+          <ILinkedin />
+        </a>
+      </div>
+      <footer class='buttons'>
+        <a
+          href='https://drive.google.com/file/d/1b8K0LEv_PwUaNEd-fPjfQHmAgZDDHzZ7/view?usp=sharing'
+          target='_blank'
+          type='button'
+          class='btn btn-primary'
+        >
+          View resume
+        </a>
+        <a class='btn btn-secondary' href='#contact'> Contact</a>
+      </footer>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+  }
+
+  .description {
+    margin-bottom: 0;
+  }
+
+  .content {
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .content > img {
+    width: 19rem;
+    border-radius: 50%;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info span {
+    color: var(--accent-color);
+  }
+
+  .info > h1 {
+    font-size: var(--text-3xl);
+    line-height: 4rem;
+    font-weight: 600;
+  }
+
+  .title {
+    font-size: var(--text-sm);
+    font-weight: normal;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 1rem;
+  }
+
+  .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  .btn {
+    background-color: var(--accent-color);
+    color: var(--bgcolor);
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    padding-block: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+  }
+
+  .btn:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
+  }
+
+  .btn-secondary {
+    background-color: var(--dark-secondary);
+    color: var(--text-secondary);
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .title {
+    color: var(--text-primary);
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      margin-top: 5rem;
+    }
+
+    .buttons {
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .info {
+      margin-top: -2rem;
+    }
+
+    .description {
+      text-align: left;
+    }
+
+    .info > h1 {
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .content {
+      flex-direction: column;
+    }
+    .btn {
+      width: 100%;
+    }
+
+    .buttons a {
+      width: 100%;
+    }
+  }
+</style>
