@@ -1,6 +1,3 @@
-import ILeft from '../../assets/icons/ILeft.astro';
-import IMenu from '../../assets/icons/IMenu.astro';
-import IRight from '../../assets/icons/IRight.astro';
 import { PROJECTS } from '../../data/ProjectsData.astro';
 import './ProjectNav.css';
 
